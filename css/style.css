@@ -442,20 +442,20 @@ summary{
 	overflow-x: hidden;
 }
 .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 ::-webkit-scrollbar {
 	width: 6px;
 	height: 6px;
 }
 ::-webkit-scrollbar-track {
-    background-color: rgba(0,0,0,0.0);
+	background-color: rgba(0,0,0,0.0);
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #ffe852;
-    border-radius: 10px;
+	background-color: #ffe852;
+	border-radius: 10px;
 }
 @keyframes fadein{
 	from{ opacity: 0; }
