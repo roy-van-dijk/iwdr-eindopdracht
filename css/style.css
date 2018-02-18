@@ -303,6 +303,10 @@ footer p{
 	display: block;
 	transform: skewX(20deg);
 }
+details[open] {
+	animation-name: fadeInDown;
+	animation-duration: 0.5s;
+}
 summary{
 	cursor: pointer;
 	outline: none;
@@ -315,13 +319,22 @@ summary{
 	width: 100%;
 	min-width: 600px;
 	border-collapse: collapse;
+	margin-top: 10px;
 }
 .season-table table td{
-	width: 50%;
+	width: 37%;
 	padding: 5px;
+}
+.season-table tr:first-of-type{
+	font-size: 24px;
+}
+.season-table tr:hover{
+	background-color: #ffe852;
+	color: #171717;
 }
 .season-table table td:first-child, .season-table table td:last-child{
 	width: unset;
+	text-align: center;
 }
 .season-table h2{
 	display: inline;
@@ -407,7 +420,7 @@ summary{
 	font-size: 20px;
 	font-style: italic;
 }
-.item-list .title, .item-list .undertitle{
+.item-list .title, .item-list .undertitle, .item-list .price{
 	display: block;
 	width: 100%;
 	text-align: center;
@@ -445,6 +458,14 @@ summary{
 	display: table;
 	clear: both;
 }
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 ::-webkit-scrollbar {
 	width: 6px;
 	height: 6px;
@@ -459,6 +480,16 @@ summary{
 @keyframes fadein{
 	from{ opacity: 0; }
 	to  { opacity: 1; }
+}
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-1.25em);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 @media (max-width: 1050px){
 	main{
