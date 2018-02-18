@@ -323,7 +323,6 @@ summary{
 	margin-top: 10px;
 }
 .season-table table td{
-	width: 37%;
 	padding: 5px;
 }
 .season-table tr:first-of-type{
@@ -334,7 +333,6 @@ summary{
 	color: #171717;
 }
 .season-table table td:first-child, .season-table table td:last-child{
-	width: unset;
 	text-align: center;
 }
 .season-table h2{
