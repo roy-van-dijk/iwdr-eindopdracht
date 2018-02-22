@@ -18,7 +18,7 @@ a{
 }
 nav{
 	width: 100%;
-	height: 75px;
+	height: 95px;
 	background-color: #171717;
 	position: fixed;
 	top: 0;
@@ -27,6 +27,7 @@ nav{
 }
 body{
 	background-color: #171717;
+	animation: fadeIn 1s;
 }
 header.frontpage{
 	background-image: url('../images/banner.jpg');
@@ -35,7 +36,6 @@ header.frontpage{
 	margin-top: 75px;
 	height: 700px;
 	position: relative;
-	animation: fadeInDown 0.7s;
 }
 .ribbon{
 	padding-top: 30px;
@@ -59,6 +59,7 @@ header.frontpage{
 	display: block;
 	font-size: 50px;
 	line-height: 40px;
+	animation: slideFromLeft 0.5s ease-out;
 }
 .ribbon .bottom{
 	font-family: "Univers Extra Black", sans-serif;
@@ -67,6 +68,7 @@ header.frontpage{
 	line-height: 23px;
 	text-indent: -10px;
 	transform: scale(1.7,1);
+	animation: slideFromRight 0.5s ease-out;
 }
 .ribbon-lower{
 	background-color: #171717;
@@ -81,12 +83,11 @@ header.frontpage{
 	max-width: 1000px;
 	width: 100%;
 	margin: 100px auto 0px auto;
-	animation: fadeInDown 0.7s;
 }
 .content-wrapper.frontpage{
 	z-index: 2;
 	position: absolute;
-	margin: -65px auto 0px auto;
+	margin: -40px auto 0px auto;
 	right: 0;
 	left: 0;
 }
@@ -94,7 +95,7 @@ main{
 	background-color: #171717;
 	color: #ffe852;
 	width: 100%;
-	padding: 0px 10px 10px 10px;
+	padding: 25px 10px 10px 10px;
 }
 main article{
 	position: relative;
@@ -120,6 +121,7 @@ main .page-title h1{
 	transform: skewX(20deg);
 }
 main p{
+	line-height: 28px;
 	margin-top: 20px;
 }
 .frontpage iframe{
@@ -127,7 +129,10 @@ main p{
 	margin: 0px auto;
 }
 .logo{
-	margin-left: 10px;
+	float: left;
+	height: 75px;
+	padding-top: 25px;
+	padding-left: 20px;
 }
 .logo a{
 	color: #ffe852;
@@ -139,14 +144,14 @@ main p{
 	float: left;
 }
 .logo img{
-	height: 55px;
-	margin: 10px 0px;
+	width: auto;
+	height: 50px;
 }
 .hamburger-toggle{
 	display: none;
 	position: absolute;
-	height: 75px;
-	width: 75px;
+	height: 95px;
+	width: 95px;
 	right: 0;
 	opacity: 0;
 	cursor: pointer;
@@ -155,19 +160,18 @@ main p{
 	display: block;
 }
 .hamburger{
-	width: 55px;
-	height: 55px;
-	border: 3px solid #ffe852;
+	width: 65px;
+	height: 65px;
+	border: 5px solid #ffe852;
 	border-radius: 10px;
 	cursor: pointer;
-	margin: 10px auto;
+	margin: 15px 10px 0px 0px;
 	display: none;
 	float: right;
-	margin-right: 10px;
 }
 .hamburger > div{
-	height: 3px;
-	width: 30px;
+	height: 5px;
+	width: 35px;
 	margin: 10px auto 0px auto;
 	border-radius: 10px;
 	background-color: #ffe852;
@@ -189,7 +193,7 @@ main p{
 .links li a{
 	color: #ffe852;
 	text-decoration: none;
-	line-height: 75px;
+	line-height: 95px;
 	font-size: 18px;
 	font-weight: bold;
 	display: block;
@@ -225,8 +229,12 @@ footer{
 	transform: skewX(-20deg);
 }
 footer p{
+	line-height: 70px;
 	margin-top: 0;
 	transform: skewX(20deg);
+}
+footer.frontpage{
+	margin-top: 50px;
 }
 .grid-items{
 	list-style-type: none;
@@ -241,8 +249,7 @@ footer p{
 	width: 32.9%;
 	border: 5px solid rgba(0,0,0,0.0);
 	/* animation bug fix chrome */
-	-webkit-backface-visibility: hidden;
-	transform: translateZ(0) scale(1.0, 1.0);
+	transform: scale(1.0, 1.0);
 }
 .grid-items li:hover .item-ribbon{
 	transform: skewY(0deg);
@@ -262,7 +269,7 @@ footer p{
 	width: 100%;
 	text-align: center;
 	display: block;
-	height: 70px;
+	height: 100px;
 	bottom: 30px;
 	background-color: #171717;
 	padding-top: 5px;
@@ -282,12 +289,17 @@ footer p{
 	object-position: center top;
 }
 .grid-items .title{
-	font-size: 1.5em;
+	font-size: 30px;
+	line-height: 50px;
 	display: block;
 }
+.grid-items .undertitle{
+	font-size: 18px;
+}
 .grid-items .description{
+	font-style: italic;
 	display: none;
-	font-size: 12px;
+	font-size: 16px;
 	padding: 10px 5px 5px 5px;
 }
 .button-buy{
@@ -318,21 +330,25 @@ summary{
 }
 .season-table table{
 	width: 100%;
-	min-width: 600px;
+	/*min-width: 600px;*/
 	border-collapse: collapse;
 	margin-top: 10px;
 }
 .season-table table td{
 	padding: 5px;
 }
-.season-table tr:first-of-type{
-	font-size: 24px;
+.season-table thead{
+	font-size: 22px;
+	text-align: left;
 }
 .season-table tr:hover{
 	background-color: #ffe852;
 	color: #171717;
 }
-.season-table table td:first-child, .season-table table td:last-child{
+.season-table tr td:first-child, 
+.season-table tr td:last-child,
+.season-table tr th:first-child, 
+.season-table tr th:last-child{
 	text-align: center;
 }
 .season-table h2{
@@ -465,18 +481,15 @@ summary{
 	-ms-user-select: none;
 	user-select: none;
 }
-::-webkit-scrollbar {
-	width: 6px;
-	height: 6px;
+@keyframes slideFromLeft{
+	from { margin-left: -150%;}
+	to   { margin-left: 0%; }
 }
-::-webkit-scrollbar-track {
-	background-color: rgba(0,0,0,0.0);
+@keyframes slideFromRight{
+	from { margin-right: -150%;}
+	to   { margin-right: 0%; }
 }
-::-webkit-scrollbar-thumb {
-	background-color: #ffe852;
-	border-radius: 10px;
-}
-@keyframes fadein{
+@keyframes fadeIn{
 	from{ opacity: 0; }
 	to  { opacity: 1; }
 }
@@ -496,6 +509,53 @@ summary{
 	}
 }
 @media (max-width: 800px) {
+	/* responsive table */
+	.season-table table, .season-table table thead, .season-table table tbody, .season-table table th, .season-table table td, .season-table table tr { 
+		display: block; 
+	}
+	.season-table table thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	.season-table table td { 
+		border: none;
+		position: relative;
+		padding-left: 55%;
+	}
+	.season-table table td:before { 
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	.season-table table tr{
+		margin: 20px 0px;
+		padding: 10px;
+		background-color: #ffe852;
+		border-radius: 10px;
+		color: black;
+	}
+
+	.season-table td:nth-of-type(1):before { content: "#"; }
+	.season-table td:nth-of-type(2):before { content: "Title"; }
+	.season-table td:nth-of-type(3):before { content: "Original air date"; }
+	.season-table td:nth-of-type(4):before { content: "Viewers (millions)"; }
+
+	.season-table tr td:first-child, 
+	.season-table tr td:last-child,
+	.season-table tr th:first-child, 
+	.season-table tr th:last-child{
+		text-align: left;
+	}
+
+
+	/* end responsive table */
+
+
+
 	.item-list li img, .item-list .item-attributes{
 		width: 100%;	
 	}
@@ -504,9 +564,6 @@ summary{
 	}
 	.grid-items li{
 		width: 49.5%;
-	}
-	.season-table{
-		overflow-x: scroll;
 	}
 	.links{
 		margin-top: 75px;
@@ -523,6 +580,9 @@ summary{
 	}
 }
 @media (max-width: 500px) {
+	.content-wrapper.frontpage{
+		margin: -100px auto 0px auto;
+	}
 	.grid-items li{
 		width: 100%;
 	}
