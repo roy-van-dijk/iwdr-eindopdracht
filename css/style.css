@@ -27,7 +27,7 @@ nav{
 }
 body{
 	background-color: #171717;
-	animation: fadeIn 1s;
+	animation: fadeIn 0.7s;
 	position: relative;
 }
 header.frontpage{
@@ -81,6 +81,7 @@ header.frontpage{
 	max-width: 1000px;
 	width: 100%;
 	margin: 100px auto 0px auto;
+	position: relative;
 }
 .content-wrapper.frontpage{
 	z-index: 2;
@@ -124,17 +125,11 @@ main p{
 	line-height: 25px;
 	margin-top: 20px;
 }
-.jake{
-	background-image: url(../images/jake.png);
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 378px;
-	height: 426px;
-	z-index: -99;
-}
 .nyc{
 	width: 100%;
+	background-color: #171717;
+	display: block;
+	margin-bottom: -1px;
 }
 .frontpage iframe{
 	display: block;
@@ -228,25 +223,17 @@ main p{
 	color: #171717;
 }
 footer{
-	background-color: #ffe852;
 	z-index: 15;
-	line-height: 70px;
 	width: 100%;
-	text-align: center;
 	line-height: 70px;
+	text-align: center;
 	margin-top: 25px;
 	font-weight: bold;
 	font-size: 20px;
 	color: #171717;
-	transform: skewX(-20deg);
 }
-footer p{
-	line-height: 70px;
-	margin-top: 0;
-	transform: skewX(20deg);
-}
-footer.frontpage{
-	margin-top: 50px;
+footer .inner{
+	background-color: #ffe852;
 }
 .grid-items{
 	list-style-type: none;
@@ -360,9 +347,9 @@ summary{
 	background-color: #ffe852;
 	color: #171717;
 }
-.season-table tr td:first-child, 
+.season-table tr td:first-child,
 .season-table tr td:last-child,
-.season-table tr th:first-child, 
+.season-table tr th:first-child,
 .season-table tr th:last-child{
 	text-align: center;
 }
@@ -530,25 +517,25 @@ summary{
 }
 @media (max-width: 800px) {
 	/* responsive table */
-	.season-table table, .season-table table thead, .season-table table tbody, .season-table table th, .season-table table td, .season-table table tr { 
-		display: block; 
+	.season-table table, .season-table table thead, .season-table table tbody, .season-table table th, .season-table table td, .season-table table tr {
+		display: block;
 	}
-	.season-table table thead tr { 
+	.season-table table thead tr {
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
-	.season-table table td { 
+	.season-table table td {
 		border: none;
 		position: relative;
 		padding-left: 55%;
 	}
-	.season-table table td:before { 
+	.season-table table td:before {
 		position: absolute;
 		top: 5px;
 		left: 5px;
-		width: 45%; 
-		padding-right: 10px; 
+		width: 45%;
+		padding-right: 10px;
 		white-space: nowrap;
 	}
 	.season-table table tr{
@@ -564,16 +551,16 @@ summary{
 	.season-table td:nth-of-type(3):before { content: "Original air date"; }
 	.season-table td:nth-of-type(4):before { content: "Viewers (millions)"; }
 
-	.season-table tr td:first-child, 
+	.season-table tr td:first-child,
 	.season-table tr td:last-child,
-	.season-table tr th:first-child, 
+	.season-table tr th:first-child,
 	.season-table tr th:last-child{
 		text-align: left;
 	}
 	/* end responsive table */
 
 	.item-list li img, .item-list .item-attributes{
-		width: 100%;	
+		width: 100%;
 	}
 	.upper-form{
 		grid-template-columns: 1fr 1fr;
