@@ -141,18 +141,11 @@ main p{
 .logo{
 	float: left;
 	height: 95px;
-	padding: 25px 20px 20px 20px;
-}
-.logo a{
-	color: #ffe852;
-	font-weight: bold;
-	font-size: 20px;
-	text-decoration: none;
-	float: left;
+	padding: 20px;
 }
 .logo img{
 	width: auto;
-	height: 50px;
+	height: 55px;
 }
 .hamburger-toggle{
 	display: none;
@@ -569,7 +562,7 @@ summary{
 		width: 49.5%;
 	}
 	.links{
-		margin-top: 75px;
+		margin-top: 95px;
 		display: none;
 		margin-right: 0px;
 		float: none;
