@@ -130,6 +130,9 @@ main p{
 	background-color: #171717;
 	display: block;
 	margin-bottom: -1px;
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
 }
 .frontpage iframe{
 	display: block;
